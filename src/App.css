@@ -324,15 +324,30 @@ body {
 	right: 50px;
 	bottom: 50px;
 	background-color: #fff;
-	border: 2px yellow solid;
+
 	border-radius: 50%;
+
+	text-decoration: none;
 
 }
 
+.repository:hover {
+	-webkit-transform: scale(1.1) perspective(1500px);
+	        transform: scale(1.1) perspective(1500px);
+			background-color: #28d3e7;
+			
+}	
 .link-repository{
-
+	text-decoration: none;
+	color: inherit;
 }
 
 .bxl-github{
 	font-size: 75px;
+	text-decoration: none;
+	color: #28d3e7;
+}
+
+.bxl-github:hover{
+	color:#fff;
 }
