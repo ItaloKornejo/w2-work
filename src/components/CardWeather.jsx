@@ -6,7 +6,6 @@ const CardWeather = ({weather,weatherWeek,weatherCondition,setNewCoords}) => {
   const [isCelcius,setIsCelcius] = useState(true)
   const handleScale = () => setIsCelcius(!isCelcius)
   
-
   return (
     <div className="container">
         <CardWeatherSide 

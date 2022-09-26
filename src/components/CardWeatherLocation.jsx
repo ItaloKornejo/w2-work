@@ -7,15 +7,11 @@ const CardWeatherLocation = ({ weatherCondition,setNewCoords}) => {
   const [ckeckedTwo,setCkeckedTwo] = useState()
   const [ckeckedThree,setCkeckedThree] = useState()
   const [ckeckedFour,setCkeckedFour] = useState()
-  // const [newCoords,setNewCoords] = useState()
 
   const backgorundGradient = {
     backgroundImage : gradient,
     borderRadius: '25px'
   }
-
-
-  
   const handleChangeTwo = () => {
     setNewCoords({ 
       lat: 19.432748616447704,

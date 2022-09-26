@@ -19,7 +19,7 @@ useEffect(()=>{
     }
     const wind={}
     for (const cardinal in cardinals) {
-      if(weather.wind.deg>cardinals[cardinal][0] && weather.wind.deg<cardinals[cardinal][1])
+      if(weather.wind.deg>=cardinals[cardinal][0] && weather.wind.deg<=cardinals[cardinal][1])
       wind.direction=cardinal
     }
     wind.speed=((weather.wind.speed*36)/10).toFixed(1)

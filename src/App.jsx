@@ -28,7 +28,6 @@ function App() {
     {'50d': `url(${'/9_storm.jpg'})`, '50n': `url(${'/9n_storm.jpg'})`, gradientd : 'var(--gradient7)',gradientn : 'var(--gradient7n)'},
   ]
 
-
 useEffect(()=>{
   if(weather){
     setTimeout(() => {
