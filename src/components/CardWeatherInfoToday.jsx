@@ -7,7 +7,8 @@ const [wind,setWind] = useState()
 useEffect(()=>{
   if(weather){
     const cardinals = {
-      North:[335,20],
+      North:[335,360],
+      NortH:[0,20],
       Northeast:[20,65],
       East:[65,110],
       Southeast:[110,155],
@@ -22,6 +23,7 @@ useEffect(()=>{
       wind.direction=cardinal
     }
     wind.speed=((weather.wind.speed*36)/10).toFixed(1)
+    console.log( weather.wind.deg,wind);
     setWind(wind)
   }
 },[weather])

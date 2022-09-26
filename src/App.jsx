@@ -88,9 +88,6 @@ useEffect(()=>{
   }
 },[coords])
 
-
-console.log('>>>> ',newCoords);
-
 return (
     <div className="App">
       {
