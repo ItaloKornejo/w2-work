@@ -46,6 +46,12 @@ body {
 }
 
 .container {
+	/* display: flex;
+	flex-direction: column;
+	gap:2rem; */
+
+
+	/*======MODE========*/
 	border-radius: 25px;
 	-webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
 	        box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
@@ -159,9 +165,6 @@ body {
 }
 
 .switch-toggle input[type="checkbox"] {
-    /* position: absolute;
-    opacity: 0;
-    z-index: -2; */
     display:none;
 }
 
@@ -204,6 +207,7 @@ body {
 }
 
 .info-side {
+
 	position: relative;
 	float: left;
 	display: flex;
@@ -216,7 +220,7 @@ body {
 .today-info {
 	padding: 15px;
 	margin: 0 25px 25px 25px;
-/* 	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25); */
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 }
 
@@ -240,7 +244,6 @@ body {
 	-webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
 	        box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
-	/* background: #; */
 }
 
 .week-list>li {
@@ -302,7 +305,6 @@ body {
 	border-radius: 25px;
 	padding: 10px;
 	font-family: 'Montserrat', sans-serif;
-	/* background-image: var(--gradient1); */
 	color: #ffffff;
 	font-weight: 700;
 	-webkit-box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
@@ -329,16 +331,11 @@ body {
 
 .repository{
 	position: fixed;
-	/* height: 10vh;
-	max-width: 100px; */
 	right: 50px;
 	bottom: 50px;
 	background-color: #fff;
-
 	border-radius: 50%;
-
 	text-decoration: none;
-
 }
 
 .repository:hover {
@@ -361,11 +358,6 @@ body {
 .bxl-github:hover{
 	color:#fff;
 }
-
-/* ==========================================================*/
-/* ==========================================================*/
-/* ==========================================================*/
-
 
 details {
 	position: relative;
@@ -392,7 +384,6 @@ details[open] summary:before {
 	content: '';
 	display: block;
 	width: 100vw;
-	/* height: 100vh; */
 	background: transparent;
 	position: fixed;
 	top: 0;
@@ -571,4 +562,82 @@ input[title]{
 @keyframes ptAiguille{
 	0%{transform:rotate(0deg);}
 	100%{transform:rotate(360deg);}
+}
+
+@media (max-width: 700px) {
+	.weather-side {
+		width: 250px;
+	}
+	.container {
+		height: 300px;
+	}
+
+	.week-container{
+		display: none;
+	}
+	.info-side {
+		width: 250px;
+	}
+
+	
+	.today-info>div .title {
+		font-size: 14px;
+		float: left;
+		width: 30px;
+	}
+
+	.today-info>div .value {
+	float: right;
+	font-size: 14px;
+	}
+
+	input[title]{
+		font-weight: 600;
+	}
+	
+	
+	details {
+		position: relative;
+		 margin: 0rem 0rem; 
+	}
+	summary{
+		padding: 0.5rem 0rem;
+	}
+
+	summary:after {
+		margin-right: 14px;
+
+	}
+	.date-container {
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	.weather-big_icon{
+		position: absolute;
+		right:0px;
+		top: 0px;
+	}
+
+	.weather-container {
+		position: absolute;
+		bottom: 15px;
+		left: 15px;
+	}
+
+	.repository{
+		right: 25px;
+		bottom: 25px;
+	}
+
+	.bxl-github{
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 525px) {
+	.info-side {
+		display: none;
+	}
 }
