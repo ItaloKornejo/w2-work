@@ -23,9 +23,9 @@ function App() {
     {'04d': `url(${'/4_brokenclouds.jpg'})`, '04n': `url(${'/4n_brokenclouds.jpg'})`, gradientd : 'var(--gradient3)',gradientn : 'var(--gradient3n)'},
     {'09d': `url(${'/5_showerrain.jpg'})`,'09n': `url(${'/5n_showerrain.jpg'})`, gradientd : 'var(--gradient4)',gradientn : 'var(--gradient4n)'},
     {'10d': `url(${'/6_rain.jpg'})`,'10n': `url(${'/6n_rain.jpg'})`, gradientd : 'var(--gradient4)',gradientn : 'var(--gradient4n)'},
-    {'11d': `url(${'/7_snow.jpg'})`,'11n': `url(${'/7n_snow.jpg'})`, gradientd : 'var(--gradient5)',gradientn : 'var(--gradient5n)'},
-    {'13d': `url(${'/8_mist.jpg'})`, '13n': `url(${'/8n_mist.jpg'})`, gradientd : 'var(--gradient6)',gradientn : 'var(--gradient6n)'},
-    {'50d': `url(${'/9_storm.jpg'})`, '50n': `url(${'/9n_storm.jpg'})`, gradientd : 'var(--gradient7)',gradientn : 'var(--gradient7n)'},
+    {'13d': `url(${'/7_snow.jpg'})`,'13n': `url(${'/7n_snow.jpg'})`, gradientd : 'var(--gradient6)',gradientn : 'var(--gradient6n)'},
+    {'50d': `url(${'/8_mist.jpg'})`, '50n': `url(${'/8n_mist.jpg'})`, gradientd : 'var(--gradient7)',gradientn : 'var(--gradient7n)'},
+    {'11d': `url(${'/9_storm.jpg'})`, '11n': `url(${'/9n_storm.jpg'})`, gradientd : 'var(--gradient5)',gradientn : 'var(--gradient5n)'},
   ]
 
 useEffect(()=>{

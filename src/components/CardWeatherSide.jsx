@@ -42,6 +42,9 @@ const CardWeatherSide = ({weather,isCelcius,handleScale,weatherCondition}) => {
     handleScale()
     console.log('Scale from Side on Handle: ',isCelcius)
   };
+
+  console.log(weatherCondition)
+
   return (
     <div className='weather-side' style={backgorundSide} >
       <div className="weather-gradient" style={backgorundGradient}></div>
