@@ -27,8 +27,8 @@ const CardWeatherLocation = ({ weatherCondition,setNewCoords}) => {
 
   const handleChangeThree = () => {
     setNewCoords({
-      lat: -33.42906608547034,
-      lon: -70.66656882494084,
+      lat: -33.447487,
+      lon: -70.673676,
       country: 'cl'
     })
     console.log('HANDLE 2°');
@@ -36,8 +36,8 @@ const CardWeatherLocation = ({ weatherCondition,setNewCoords}) => {
 
   const handleChangeFour = () => {
     setNewCoords({
-      lat: 4.59615848994027,
-      lon: -74.0771229512744,
+      lat: 4.624335,
+      lon: -74.063644,
       country: 'co'
     })
     console.log('HANDLE 3°');
@@ -49,27 +49,6 @@ const CardWeatherLocation = ({ weatherCondition,setNewCoords}) => {
     }
   }
   ,[weatherCondition])
-
-//   useEffect(()=>{
-//     const obj = [
-//       { 
-//       lat: 19.432748616447704,
-//       lon: -99.13325293848216,
-//       country: 'mx'
-//       },
-//       {
-//         lat: -33.42906608547034,
-//         lon: -70.66656882494084,
-//         country: 'cl'
-//       },
-//       {
-//         lat: 4.59615848994027,
-//         lon: -74.0771229512744,
-//         country: 'co'
-//       }
-//   ]
-//   setNewCoords(obj)
-// },[])  
 
   return (
     <div className="location-container">

@@ -38,6 +38,8 @@ const CardWeatherSide = ({weather,isCelcius,handleScale,weatherCondition}) => {
     }
   ,[weatherCondition])
 
+    console.log(weatherCondition)
+
   const handleOnChange = () => {
     handleScale()
     console.log('Scale from Side on Handle: ',isCelcius)
