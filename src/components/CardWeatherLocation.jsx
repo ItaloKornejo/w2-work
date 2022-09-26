@@ -54,7 +54,7 @@ const CardWeatherLocation = ({ weatherCondition,setNewCoords}) => {
     <div className="location-container">
       <details className="custom-select" style={backgorundGradient}>
         <summary className="radios" > 
-          <input type="radio" name="item" id="default" title="Your Country" defaultChecked/>
+          <input type="radio" name="item" id="default" title="Your Location" defaultChecked/>
           <input type="radio" name="item" id="item1" title="Ciudad de México" checked={ckeckedTwo} onChange={handleChangeTwo} />
           <input type="radio" name="item" id="item2" title="Santiago" checked={ckeckedThree} onChange={handleChangeThree}/>
           <input type="radio" name="item" id="item3" title="Bogota" checked={ckeckedFour} onChange={handleChangeFour} />
