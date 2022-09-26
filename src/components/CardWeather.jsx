@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import CardWeatherSide from './CardWeatherSide'
 import CardWeatherInfo from './CardWeatherInfo'
 
-const CardWeather = ({weather,weatherWeek,weatherCondition}) => {
+const CardWeather = ({weather,weatherWeek,weatherCondition,setNewCoords}) => {
   const [isCelcius,setIsCelcius] = useState(true)
   const handleScale = () => setIsCelcius(!isCelcius)
   
@@ -20,6 +20,7 @@ const CardWeather = ({weather,weatherWeek,weatherCondition}) => {
          weatherWeek={weatherWeek}
          isCelcius={isCelcius}
          weatherCondition={weatherCondition}
+         setNewCoords={setNewCoords}
         />
     </div>
   )

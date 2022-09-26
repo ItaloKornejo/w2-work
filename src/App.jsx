@@ -5,7 +5,9 @@ import CardWeather from './components/CardWeather'
 import Github from './components/Github'
 
 function App() {
+
   const [coords, setCoords] = useState()
+  const [newCoords,setNewCoords] = useState()
   const [weather,setWeather] = useState()
   const [country,setCountry] = useState()
   const [weatherWeek,setWeatherWeek] = useState()
@@ -25,7 +27,20 @@ function App() {
     {'50d': `url(${'../../public/9_storm.jpg'})`, '50n': `url(${'../../public/9_storm.jpg'})`, gradientd : 'var(--gradient8)',gradientn : 'var(--gradient8)'},
   ]
 
+  useEffect(()=>{
+    if(newCoords){
+      const URL=`https://api.openweathermap.org/data/2.5/weather?lat=${newCoords.lat}&lon=${newCoords.lon}&appid=${APIKEY}`
+      axios.get(URL)
+        .then(res => setWeather(res.data) )
+        .catch(err => console.log(err))
+      
+      const NURL=`https://api.openweathermap.org/data/2.5/forecast?lat=${newCoords.lat}&lon=${newCoords.lon}&appid=${APIKEY}`
+      axios.get(NURL)
+        .then(res => setWeatherWeek(res.data) )
+        .catch(err => console.log(err))
+    }
 
+  },[newCoords])
 
 useEffect(()=>{
   const success = (pos) => {
@@ -38,12 +53,6 @@ useEffect(()=>{
   navigator.geolocation.getCurrentPosition(success)
 },[])
 
-useEffect(()=>{
-  const URL=`https://restcountries.com/v3.1/name/peru`
-    axios.get(URL)
-      .then(res => setCountry(res.data) )
-      .catch(err => console.log(err))
-},[])
 
 useEffect(()=>{
   if(weather){
@@ -61,34 +70,31 @@ useEffect(()=>{
       .then(res => setWeather(res.data) )
       .catch(err => console.log(err))
 
+    const NURL=`https://api.openweathermap.org/data/2.5/forecast?lat=${coords.lat}&lon=${coords.lon}&appid=${APIKEY}`
+    axios.get(NURL)
+        .then(res => setWeatherWeek(res.data) )
+        .catch(err => console.log(err))
   }
 },[coords])
 
-useEffect(()=>{
-  if(coords){
-    const URL=`https://api.openweathermap.org/data/2.5/forecast?lat=${coords.lat}&lon=${coords.lon}&appid=${APIKEY}`
-    axios.get(URL)
-      .then(res => setWeatherWeek(res.data) )
-      .catch(err => console.log(err))
+// useEffect(()=>{
+//   if(coords){
+//     const URL=`https://api.openweathermap.org/data/2.5/forecast?lat=${coords.lat}&lon=${coords.lon}&appid=${APIKEY}`
+//     axios.get(URL)
+//       .then(res => setWeatherWeek(res.data) )
+//       .catch(err => console.log(err))
+//   }
+// },[coords])
 
-  }
-},[coords])
-
-// console.log(weather)
-// console.log(weatherWeek)
-// console.log('THIS COUNTRY: ',country)
+console.log('>>>> ',newCoords);
 
 return (
     <div className="App">
-      {/* <h2><span>Temperatura: </span>{weather?.main.temp}</h2>
-      <h2><span>Pais: </span>{weather?.sys.country}</h2> https://restcountries.com/v3.1/name/peru
-      <h2><span>Clima: </span>{weather?.weather[0].main}</h2>
-      <h2><span>Se espera: </span>{weather?.weather[0].description}</h2> */}
       <CardWeather 
         weather={weather}
         weatherWeek={weatherWeek}
         weatherCondition={weatherCondition}
-
+        setNewCoords={setNewCoords}
       />
       <Github/>
     </div>

@@ -16,12 +16,10 @@ const CardWeatherWeek = ({weatherWeek,isCelcius}) => {
           Fahrenheit : (1.8*(day.main.temp-273) + 32).toFixed(0)+'°F'
         })
       }  
-      console.log(days)
       setWeeklyWeather(days)
     }
   },[weatherWeek])
-
-console.log('from week is celcius; ', isCelcius);
+  
   return (
     <div className="week-container">
       <ul className="week-list">

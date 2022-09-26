@@ -3,7 +3,7 @@ import CardWeatherInfoToday from './CardWeatherInfoToday'
 import CardWeatherLocation from './CardWeatherLocation'
 import CardWeatherWeek from './CardWeatherWeek'
 
-const CardWeatherInfo = ({weather,weatherWeek,isCelcius,weatherCondition}) => {
+const CardWeatherInfo = ({weather,weatherWeek,isCelcius,weatherCondition,setNewCoords}) => {
   return (
     <div className='info-side'>
       <CardWeatherInfoToday
@@ -15,6 +15,7 @@ const CardWeatherInfo = ({weather,weatherWeek,isCelcius,weatherCondition}) => {
       />
       <CardWeatherLocation
         weatherCondition={weatherCondition}
+        setNewCoords={setNewCoords}
       />
     </div>
   )
